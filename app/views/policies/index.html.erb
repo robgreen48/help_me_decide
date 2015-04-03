@@ -7,6 +7,7 @@
     <tr>
       <th>Party</th>
       <th>Issue area</th>
+      <th>Policy Text</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,6 +17,7 @@
       <tr>
         <td><%= policy.party_id %></td>
         <td><%= policy.issue_area %></td>
+        <td><%= policy.policy_text %></td>
         <td><%= link_to 'Show', policy %></td>
         <td><%= link_to 'Edit', edit_policy_path(policy) %></td>
         <td><%= link_to 'Destroy', policy, method: :delete, data: { confirm: 'Are you sure?' } %></td>

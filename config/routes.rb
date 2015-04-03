@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :parties
+  resources :policies
   resources :policies
   resources :parties
   root :to => "pages#home"

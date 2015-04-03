@@ -3,34 +3,16 @@
 
 <form class="form-inline">
   <div class="form-group">
-    <label for="parties1">Party 1</label>
-    <select class="form-control input-lg">
-	  <option>1</option>
-	  <option>2</option>
-	  <option>3</option>
-	  <option>4</option>
-	  <option>5</option>
-	</select>
+    <label for="parties1">Compare </label>
+    <%= select_tag 'party_id1', options_for_select(@parties.collect{ |u| [u.name, u.id] }), :class => 'form-control input-lg' %>
   </div>
   <div class="form-group">
-    <label for="parties2">Party 2</label>
-    <select class="form-control input-lg">
-	  <option>1</option>
-	  <option>2</option>
-	  <option>3</option>
-	  <option>4</option>
-	  <option>5</option>
-	</select>
+    <label for="parties2">To </label>
+    <%= select_tag 'party_id2', options_for_select(@parties.collect{ |u| [u.name, u.id] }), :class => 'form-control input-lg' %>
   </div>
   <div class="form-group">
-    <label for="issue">Issue</label>
-    <select class="form-control input-lg">
-	  <option>1</option>
-	  <option>2</option>
-	  <option>3</option>
-	  <option>4</option>
-	  <option>5</option>
-	</select>
+    <label for="issue">On </label>
+    <%= select_tag 'issue', options_for_select(@issues.collect), :class => 'form-control input-lg' %>
   </div>
   <button type="submit" class="btn btn-primary btn-lg">Compare</button>
 </form>

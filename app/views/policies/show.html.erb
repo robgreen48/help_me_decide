@@ -10,5 +10,9 @@
   <%= @policy.issue_area %>
 </p>
 
+<p>
+  <strong>Policy text:</strong>
+  <%= @policy.policy_text %>
+</p>
 <%= link_to 'Edit', edit_policy_path(@policy) %> |
 <%= link_to 'Back', policies_path %>
