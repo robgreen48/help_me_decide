@@ -1,7 +1,8 @@
-<h1>Compare political parties on the major issues</h1>
+<div class="main">
+  <h1>Compare political parties on the major issues</h1>
 <p>Pick two parties, and one issue...</p>
 
-<form class="form-inline">
+<form id="big-form" class="form-horizontal" action="/results" method="get">
   <div class="form-group">
     <label for="parties1">Compare </label>
     <%= select_tag 'party_id1', options_for_select(@parties.collect{ |u| [u.name, u.id] }), :class => 'form-control input-lg' %>
@@ -16,3 +17,4 @@
   </div>
   <button type="submit" class="btn btn-primary btn-lg">Compare</button>
 </form>
+</div>

@@ -2,8 +2,9 @@ Rails.application.routes.draw do
 
   resources :parties
   resources :policies
-  resources :policies
-  resources :parties
+
+  get '/results', to: 'pages#results'
+
   root :to => "pages#home"
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Comparing <%= @party1.name %> to <%= @party2.name %> on <%= @issue %></h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Party</th>
+      <th>Issue area</th>
+      <th>Policy Text</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @policies1.each do |policy| %>
+      <tr>
+        <td><%= policy.party_id %></td>
+        <td><%= policy.issue_area %></td>
+        <td><%= policy.policy_text %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<h1>Party 2</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Party</th>
+      <th>Issue area</th>
+      <th>Policy Text</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @policies2.each do |policy| %>
+      <tr>
+        <td><%= policy.party_id %></td>
+        <td><%= policy.issue_area %></td>
+        <td><%= policy.policy_text %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
